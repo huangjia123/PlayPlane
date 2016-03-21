@@ -17,7 +17,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-		readyView = new ReadyView(this);
+		readyView = new ReadyView(this);//huaah
 		setContentView(readyView);
 	}
 
@@ -27,13 +27,13 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
 	}
-	//ÏÔÊ¾ÓÎÏ·½çÃæ
+	//ï¿½ï¿½Ê¾ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½
 	public void toMainView(){
 		mainView = new MainView(this);
 		setContentView(mainView);
 		readyView = null;
 	}
-	//ÏÔÊ¾½áÊø½çÃæ
+	//ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public void toEndView(int scoreSum){
 		System.gc();
 		endView = new EndView(this,scoreSum);
